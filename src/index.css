@@ -1,0 +1,101 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+}
+body{
+  margin: 0px;
+}
+.calculator{
+  margin-top: 250px;
+}
+.calc-button{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px;
+  width: 300px;
+  margin-top: 150px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 250px;
+  grid-auto-rows: 50px;
+}
+button {
+  font-size: 1.5rem;
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  background-color: rgb(114, 114, 234);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+button:hover{
+  background-color: rgb(201, 201, 222);
+}
+button:nth-child(1){
+  width: 150px;
+  grid-column: 1 / span 2;
+}
+button:nth-child(10), button:nth-child(11), button:nth-child(12), button:nth-child(17),
+button:nth-child(18), button:nth-child(19), button:nth-child(24), button:nth-child(25), button:nth-child(26),
+button:nth-child(31), button:nth-child(32), button:nth-child(33)
+{
+  background-color: rgb(232, 228, 228);
+}
+button:nth-child(10):hover, button:nth-child(11):hover, button:nth-child(12):hover, button:nth-child(17):hover,
+button:nth-child(18):hover, button:nth-child(19):hover, button:nth-child(24):hover, button:nth-child(25):hover, button:nth-child(26):hover,
+button:nth-child(31):hover, button:nth-child(32):hover, button:nth-child(33):hover
+{
+  background-color: grey;
+}
+input{
+  width: 850px;
+  height: 100px;
+  margin-left: 280px;
+  border-radius: 30px;
+  border: 1px solid;
+  font-size: 3rem;
+  text-align: right;
+}
+@media only screen and (max-width: 767px){
+  .calc-button{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    grid-auto-rows: 45px;
+  }
+  .calculator{
+    width: 100%;
+    margin: 10px auto;
+  }
+  button{
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+  input{
+    width: 100vw;
+    font-size: 2rem;
+    height: 50px;
+    padding: 10px;
+  }
+  button:nth-child(1){
+    grid-column: 1 / span 2;
+  }
+}
+@media only screen and(min-width: 1025px){
+  .calculator{
+    width: 500px;
+  }
+  .calc-button{
+    grid-template-columns: repeat(7, 1fr);
+  }
+  button{
+    font-size: 1.5rem;
+  }
+  .input{
+    font-size: 3rem;
+    height: 80px;
+  }
+}
